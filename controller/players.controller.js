@@ -57,7 +57,8 @@ function deletePlayer(req, res) {
     }
     res.json({
       success: true,
-      message: `Player ${doc.name} has been deleted`,
+      message: `The player ${doc.name} has been deleted.`,
+      data: doc,
     });
   });
 }
