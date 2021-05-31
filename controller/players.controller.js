@@ -30,7 +30,7 @@ function postPlayer(req, res) {
   });
   newPlayer
     .save()
-    .then((savedPlayer) => res.json(`Saved ${savedPlayer.name} to database`))
+    .then((savedPlayer) => res.json(savedPlayer))
     .catch((error) =>
       res.json({ success: false, message: 'Could not save player to database' })
     );

@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -19,6 +20,7 @@ mongoose.set('returnOriginal', false);
 
 const server = express();
 
+server.use(cors());
 server.use(express.json());
 
 server.get('/', (req, res) => res.json({ message: 'server is alive' }));

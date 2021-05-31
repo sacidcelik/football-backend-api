@@ -6,7 +6,7 @@ const playerSchema = new mongoose.Schema({
   isFree: Boolean,
   club: String,
   position: String,
-  skills: String,
+  skills: Array,
   email: String,
 });
 
